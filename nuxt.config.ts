@@ -6,11 +6,20 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: [
     'primeicons/primeicons.css',
+    '~/assets/css/main.css',
   ],
   modules: [
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-fonts',
     '@primevue/nuxt-module',
   ],
+  googleFonts: {
+    families: {
+      Inter: true,
+      Prompt: true,
+    },
+    display: 'swap',
+  },
   primevue: {
     options: {
       theme: {
