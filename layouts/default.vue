@@ -121,6 +121,7 @@ function onResize() {
   <div class="flex justify-center relative">
     <div ref="canvasContainer" class="fixed -z-50 opacity-45 dark:opacity-15" />
     <slot></slot>
+    <ScrollTop />
   </div>
 </template>
 
