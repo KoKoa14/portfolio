@@ -1,3 +1,9 @@
 body {
     font-family: 'Inter', 'Prompt', sans-serif;
 }
+
+.p-card {
+    background-color: color-mix(in srgb, var(--p-primary-color) 10%, var(--p-primary-contrast-color) 60%) !important;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.5) !important;
+}
