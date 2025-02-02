@@ -14,7 +14,7 @@
       <label class="text-xl md:text-3xl font-semibold text-center" :style="{
           color: 'color-mix(in srgb, var(--p-primary-color) 80%, var(--p-text-color))'
         }">A software developer.</label>
-      <label class="w-full md:w-96 lg:w-[30rem]">Since I was a child, technology has seemed miraculous to me. So I was very determined to study science and math. Until I studied the programming, I felt astonished. It breaks the limits of human memory, accuracy, and computation. It makes everything easier just by putting ideas into it.</label>
+      <label class="w-full md:w-96 lg:w-[30rem]">Since my childhood, technology has always felt magical to me, sparking a deep attraction. This wonder inspired me to focus on science and math. When I first learned programming, I was amazed by its limitless potential—It goes beyond human memory, improves accuracy, and speeds up computation. Most importantly, it transforms ideas into reality and makes life incredibly easier.</label>
       <ButtonGroup>
         <Button icon="pi pi-discord" icon-class="scale-[1.5]" severity="contrast" as="a" href="https://discordapp.com/users/geminids14" target="_blank"></Button>
         <Button class="!px-1.5 !py-0" severity="contrast" as="a" href="https://line.me/ti/p/qvQ3zsvsQK" target="_blank">
