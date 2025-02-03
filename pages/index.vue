@@ -1,5 +1,172 @@
 <script setup lang="ts">
+const jobs = [
+  {
+    title: 'Programmer',
+    titleIcon: 'pi pi-user',
+    company: 'Modern Networks Co.,Ltd.',
+    location: 'Ladprao 130, Bangkok.',
+    start: 'January 2023',
+    end: 'Present',
+    descriptions: [
+      {
+        head: 'Design, Develop, and Maintain Frontend, Backend, and Database Systems.',
+        details: [
+          'Network Device Management System.',
+          'IoT Solutions and Access Control Systems.',
+          'User Authentication Systems for Public Internet Access.',
+        ]
+      },
+      {
+        head: 'Design and Backup Power Solutions for Network Infrastructure.',
+        details: [
+          'Configure and optimize network devices for seamless operation.',
+        ]
+      },
+      {
+        head: 'Deploy and Manage Server Environments.',
+        details: [
+          'Install, configure, and maintain Ubuntu Server and Windows Server.',
+          'Set up and manage Active Directory (AD) for centralized user and resource management.',
+        ]
+      },
+      {
+        head: 'Virtualization and System Deployment.',
+        details: [
+          'Proficient in deploying and managing operating systems on virtualization platforms such as VMware and VirtualBox.',
+        ]
+      }
+    ]
+  },
+  {
+    title: 'Electronic Software Engineer',
+    titleIcon: 'pi pi-user',
+    company: 'Mitsubishi Electric Automation (Thailand) Co.Ltd.',
+    location: 'Bangchan, Bangkok',
+    start: 'June 2017',
+    end: 'December 2022',
+    descriptions: [
+      {
+        head: 'Embedded Systems & Firmware.',
+        details: [
+          'Developed and maintained C code for microcontrollers, optimizing performance and reliability.',
+        ]
+      },
+      {
+        head: 'Software Development.',
+        details: [
+          'Built Windows apps using C# and Android apps using Java/Kotlin, focusing on usability and performance.',
+        ]
+      },
+      {
+        head: 'Electrical & Electronics.',
+        details: [
+          'Designed electrical wiring systems and conducted hardware testing.',
+          'Analyzed and optimized electronic circuits for efficiency and functionality.',
+        ]
+      }
+    ]
+  },
+] as IJob[];
 
+const freelanceJobs = [
+  {
+    title: 'Spinforce Controller',
+    titleIcon: 'pi pi-desktop',
+    image: '/images/spinforce.jpg',
+    company: 'Spinforce Technologies Pte. Ltd.',
+    location: 'Singapore',
+    start: 'July 2024',
+    end: 'Present',
+    descriptions: [
+      {
+        head: 'Built a Cross-Platform Inverter Control App with Rust and Nuxt.js.',
+        details: [
+          'Developed a Windows/Linux desktop app for inverter control using Rust (backend) and Nuxt.js (frontend).',
+          'Refactored and integrated core logic from existing software for a modern, scalable solution.',
+          'Ensured high performance, safety, and seamless frontend-backend communication.',
+          'Delivered a user-friendly interface for industrial automation.',
+        ]
+      }
+    ]
+  },
+  {
+    title: 'A-Math Online',
+    titleIcon: 'pi pi-android',
+    image: '/images/amath.svg',
+    company: 'EduPLOYS Game and Toy Co.,Ltd.',
+    location: 'Rama III, Bangkok',
+    start: 'June 2022',
+    end: 'June 2023',
+    descriptions: [
+      {
+        head: 'Developed a real-time multiplayer A-Math game using Flutter (frontend) and Golang (backend), connected via gRPC for low-latency communication.',
+      },
+      {
+        head: 'Integrated Firebase Authentication for secure login and Firebase Realtime Database for real-time gameplay synchronization.',
+      },
+      {
+        head: 'Implemented game logic, matchmaking, and real-time interactions, ensuring a seamless user experience.',
+      },
+      {
+        head: 'Optimized backend performance using Golang’s concurrency model, reducing latency and improving scalability.',
+      },
+      {
+        head: 'Delivered a polished, user-friendly app with modular code for future scalability.',
+      },
+    ]
+  }
+] as IJob[];
+
+const skills = [
+  'C/C++',
+  'C#',
+  'Java',
+  'Kotlin',
+  'Flutter/Dart',
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'TypeScript',
+  'Node.js',
+  'Vue.js',
+  'Nuxt.js',
+  'React.js',
+  'Next.js',
+  'PHP Laravel',
+  'Golang',
+  'Rust',
+  'REST API',
+  'GRPC',
+  'Git',
+  'SQL',
+  'MongoDB',
+  'Circuit Analysis',
+  'Electronic Measuring',
+  'IT technical errors solving',
+];
+
+const educations = [
+  {
+    title: 'Electrical Engineering, KMITL',
+    titleIcon: 'pi pi-bolt',
+    company: "King Mongkut's Institute of Technology Ladkrabang",
+    location: 'Bangkok, Thailand',
+    start: '2013',
+    end: '2017',
+    cert: 'Bachelor of Engineering in Electrical Engineering',
+    result: 'GPA: 3.70/4.00'
+  },
+  {
+    title: 'Science Program, MWIT',
+    titleIcon: 'pi pi-bolt',
+    company: 'Mahidol Wittayanusorn School',
+    location: 'Nakhon Pathom, Thailand',
+    start: '2010',
+    end: '2013',
+    cert: 'Certificate of Secondary Education',
+    result: 'GPA: 3.27/4.00',
+  }
+] as IEducation[];
 </script>
 
 <template>
@@ -31,103 +198,7 @@
         <label class="text-xl md:text-3xl font-semibold">Jobs</label>
       </div>
       <div class="flex flex-wrap justify-center gap-4">
-        <Card class="w-full md:w-96">
-          <template #header>
-            <div class="flex justify-center items-center py-2 gap-2" :style="{
-            backgroundColor: 'var(--p-primary-color)',
-            color: 'var(--p-primary-contrast-color)',
-          }">
-              <i class="pi pi-user text-lg md:text-2xl"></i>
-              <label class="text-base md:text-xl font-semibold">Programmer</label>
-            </div>
-          </template>
-          <template #content>
-            <div class="flex flex-col gap-2">
-              <div class="flex items-center gap-2">
-                <i class="pi pi-building text-lg md:text-2xl"></i>
-                <label>Modern Networks Co.,Ltd.</label>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="pi pi-map-marker text-lg md:text-2xl"></i>
-                <label>Ladprao 130, Bangkok</label>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="pi pi-calendar text-lg md:text-2xl"></i>
-                <label>January 2023-Present</label>
-              </div>
-              <ul class="flex flex-col gap-2 list-disc pl-4">
-                <li>Design, Develop, and Maintain Frontend, Backend, and Database Systems
-                  <ul class="pl-4 text-sm" style="list-style-type: square;">
-                    <li>Network Device Management System.</li>
-                    <li>IoT Solutions and Access Control Systems.</li>
-                    <li>User Authentication Systems for Public Internet Access.</li>
-                  </ul>
-                </li>
-                <li>Design and Backup Power Solutions for Network Infrastructure
-                  <ul class="pl-4 text-sm" style="list-style-type: square;">
-                    <li>Configure and optimize network devices for seamless operation</li>
-                  </ul>
-                </li>
-                <li>Deploy and Manage Server Environments
-                  <ul class="pl-4 text-sm" style="list-style-type: square;">
-                    <li>Install, configure, and maintain Ubuntu Server and Windows Server</li>
-                    <li>Set up and manage Active Directory (AD) for centralized user and resource management</li>
-                  </ul>
-                </li>
-                <li>Virtualization and System Deployment
-                  <ul class="pl-4 text-sm" style="list-style-type: square;">
-                    <li>Proficient in deploying and managing operating systems on virtualization platforms such as VMware and VirtualBox</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </template>
-        </Card>
-        <Card class="w-full md:w-96">
-          <template #header>
-            <div class="flex justify-center items-center py-2 gap-2" :style="{
-            backgroundColor: 'var(--p-primary-color)',
-            color: 'var(--p-primary-contrast-color)',
-          }">
-              <i class="pi pi-user text-lg md:text-2xl"></i>
-              <label class="text-base md:text-xl font-semibold">Electronic Software Engineer</label>
-            </div>
-          </template>
-          <template #content>
-            <div class="flex flex-col gap-2">
-              <div class="flex items-center gap-2">
-                <i class="pi pi-building text-lg md:text-2xl"></i>
-                <label>Mitsubishi Electric Automation (Thailand) Co.Ltd.</label>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="pi pi-map-marker text-lg md:text-2xl"></i>
-                <label>Bangchan, Bangkok</label>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="pi pi-calendar text-lg md:text-2xl"></i>
-                <label>June 2017-December 2022</label>
-              </div>
-              <ul class="flex flex-col gap-2 list-disc pl-4">
-                <li>Embedded Systems & Firmware
-                  <ul class="pl-4 text-sm" style="list-style-type: square;">
-                    <li>Developed and maintained C code for microcontrollers, optimizing performance and reliability.</li>
-                  </ul>
-                </li>
-                <li>Software Development
-                  <ul class="pl-4 text-sm" style="list-style-type: square;">
-                    <li>Built Windows apps using C# and Android apps using Java/Kotlin, focusing on usability and performance.</li>
-                  </ul>
-                </li>
-                <li>Electrical & Electronics
-                  <ul class="pl-4 text-sm" style="list-style-type: square;">
-                    <li>Designed electrical wiring systems and conducted hardware testing.</li>
-                    <li>Analyzed and optimized electronic circuits for efficiency and functionality.</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </template>
-        </Card>
+        <Job v-for="job in jobs" :job="job" />
       </div>
     </div>
     <div class="flex flex-col gap-4">
@@ -136,93 +207,7 @@
         <label class="text-xl md:text-3xl font-semibold">Freelance Jobs</label>
       </div>
       <div class="flex flex-wrap justify-center gap-4">
-        <Card class="w-full md:w-96">
-          <template #header>
-            <div class="flex justify-center items-center py-2 gap-2" :style="{
-            backgroundColor: 'var(--p-primary-color)',
-            color: 'var(--p-primary-contrast-color)',
-          }">
-              <i class="pi pi-desktop text-lg md:text-2xl"></i>
-              <label class="text-base md:text-xl font-semibold">Spinforce Controller</label>
-            </div>
-          </template>
-          <template #content>
-            <div class="flex justify-center mb-4">
-              <img alt="Spinforce" src="/images/spinforce.jpg" class="h-44 rounded-md"/>
-            </div>
-            <div class="flex flex-col gap-2">
-              <div class="flex items-center gap-2">
-                <i class="pi pi-building text-lg md:text-2xl"></i>
-                <label>Spinforce Technologies Pte. Ltd.</label>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="pi pi-map-marker text-lg md:text-2xl"></i>
-                <label>Singapore</label>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="pi pi-calendar text-lg md:text-2xl"></i>
-                <label>July 2024-Present</label>
-              </div>
-              <ul class="flex flex-col gap-2 list-disc pl-4">
-                <li>Built a Cross-Platform Inverter Control App with Rust and Nuxt.js
-                  <ul class="pl-4 text-sm" style="list-style-type: square;">
-                    <li>Developed a Windows/Linux desktop app for inverter control using Rust (backend) and Nuxt.js (frontend).</li>
-                    <li>Refactored and integrated core logic from existing software for a modern, scalable solution.</li>
-                    <li>Ensured high performance, safety, and seamless frontend-backend communication.</li>
-                    <li>Delivered a user-friendly interface for industrial automation.</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </template>
-        </Card>
-        <Card class="w-full md:w-96">
-          <template #header>
-            <div class="flex justify-center items-center py-2 gap-2" :style="{
-            backgroundColor: 'var(--p-primary-color)',
-            color: 'var(--p-primary-contrast-color)',
-          }">
-              <i class="pi pi-android text-lg md:text-2xl"></i>
-              <label class="text-base md:text-xl font-semibold">A-Math Online</label>
-            </div>
-          </template>
-          <template #content>
-            <div class="flex justify-center mb-4">
-              <img alt="A-Math" src="/images/amath.svg" class="h-44 rounded-md"/>
-            </div>
-            <div class="flex flex-col gap-2">
-              <div class="flex items-center gap-2">
-                <i class="pi pi-building text-lg md:text-2xl"></i>
-                <label>EduPLOYS Game and Toy Co.,Ltd.</label>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="pi pi-map-marker text-lg md:text-2xl"></i>
-                <label>Rama III, Bangkok</label>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="pi pi-calendar text-lg md:text-2xl"></i>
-                <label>June 2022-June 2023</label>
-              </div>
-              <ul class="flex flex-col gap-2 list-disc pl-4">
-                <li>
-                  Developed a real-time multiplayer A-Math game using Flutter (frontend) and Golang (backend), connected via gRPC for low-latency communication.
-                </li>
-                <li>
-                  Integrated Firebase Authentication for secure login and Firebase Realtime Database for real-time gameplay synchronization.
-                </li>
-                <li>
-                  Implemented game logic, matchmaking, and real-time interactions, ensuring a seamless user experience.
-                </li>
-                <li>
-                  Optimized backend performance using Golang’s concurrency model, reducing latency and improving scalability.
-                </li>
-                <li>
-                  Delivered a polished, user-friendly app with modular code for future scalability.
-                </li>
-              </ul>
-            </div>
-          </template>
-        </Card>
+        <Job v-for="job in freelanceJobs" :job="job" />
       </div>
     </div>
     <div class="flex flex-col gap-4">
@@ -232,31 +217,7 @@
       </div>
       <div class="flex justify-center">
         <div class="flex flex-wrap w-full md:w-96 lg:w-[48rem] justify-center gap-4">
-          <Message severity="contrast">C/C++</Message>
-          <Message severity="contrast">C#</Message>
-          <Message severity="contrast">Java</Message>
-          <Message severity="contrast">Kotlin</Message>
-          <Message severity="contrast">Flutter/Dart</Message>
-          <Message severity="contrast">HTML</Message>
-          <Message severity="contrast">CSS</Message>
-          <Message severity="contrast">JavaScript</Message>
-          <Message severity="contrast">TypeScript</Message>
-          <Message severity="contrast">Node.js</Message>
-          <Message severity="contrast">Vue.js</Message>
-          <Message severity="contrast">Nuxt.js</Message>
-          <Message severity="contrast">React.js</Message>
-          <Message severity="contrast">Next.js</Message>
-          <Message severity="contrast">PHP Laravel</Message>
-          <Message severity="contrast">Golang</Message>
-          <Message severity="contrast">Rust</Message>
-          <Message severity="contrast">REST API</Message>
-          <Message severity="contrast">GRPC</Message>
-          <Message severity="contrast">Git</Message>
-          <Message severity="contrast">SQL</Message>
-          <Message severity="contrast">MongoDB</Message>
-          <Message severity="contrast">Circuit Analysis</Message>
-          <Message severity="contrast">Electronic Measuring</Message>
-          <Message severity="contrast">IT technical errors solving</Message>
+          <Message v-for="skill in skills" severity="contrast">{{skill}}</Message>
         </div>
       </div>
     </div>
@@ -266,76 +227,7 @@
         <label class="text-xl md:text-3xl font-semibold">Education</label>
       </div>
       <div class="flex flex-wrap justify-center gap-4">
-        <Card class="w-full md:w-96">
-          <template #header>
-            <div class="flex justify-center items-center py-2 gap-2" :style="{
-            backgroundColor: 'var(--p-primary-color)',
-            color: 'var(--p-primary-contrast-color)',
-          }">
-              <i class="pi pi-bolt text-lg md:text-2xl"></i>
-              <label class="text-base md:text-xl font-semibold">Electrical Engineering, KMITL</label>
-            </div>
-          </template>
-          <template #content>
-            <div class="flex flex-col gap-2">
-              <div class="flex items-center gap-2">
-                <i class="pi pi-building text-lg md:text-2xl"></i>
-                <label>King Mongkut's Institute of Technology Ladkrabang</label>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="pi pi-map-marker text-lg md:text-2xl"></i>
-                <label>Bangkok, Thailand</label>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="pi pi-calendar text-lg md:text-2xl"></i>
-                <label>2013-2017</label>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="pi pi-verified text-lg md:text-2xl"></i>
-                <label>Bachelor of Engineering in Electrical Engineering</label>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="pi pi-star text-lg md:text-2xl"></i>
-                <label>GPA: 3.70/4.00</label>
-              </div>
-            </div>
-          </template>
-        </Card>
-        <Card class="w-full md:w-96">
-          <template #header>
-            <div class="flex justify-center items-center py-2 gap-2" :style="{
-            backgroundColor: 'var(--p-primary-color)',
-            color: 'var(--p-primary-contrast-color)',
-          }">
-              <i class="pi pi-bolt text-lg md:text-2xl"></i>
-              <label class="text-base md:text-xl font-semibold">Science Program, MWIT</label>
-            </div>
-          </template>
-          <template #content>
-            <div class="flex flex-col gap-2">
-              <div class="flex items-center gap-2">
-                <i class="pi pi-building text-lg md:text-2xl"></i>
-                <label>Mahidol Wittayanusorn School</label>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="pi pi-map-marker text-lg md:text-2xl"></i>
-                <label>Nakhon Pathom, Thailand</label>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="pi pi-calendar text-lg md:text-2xl"></i>
-                <label>2010-2013</label>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="pi pi-verified text-lg md:text-2xl"></i>
-                <label>Certificate of Secondary Education</label>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="pi pi-star text-lg md:text-2xl"></i>
-                <label>GPA: 3.27/4.00</label>
-              </div>
-            </div>
-          </template>
-        </Card>
+        <Education v-for="edu in educations" :edu="edu" />
       </div>
     </div>
     <div class="flex flex-col gap-4">
