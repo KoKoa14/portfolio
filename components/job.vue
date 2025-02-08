@@ -11,7 +11,7 @@ const props = defineProps<{
             backgroundColor: 'var(--p-primary-color)',
             color: 'var(--p-primary-contrast-color)',
           }">
-        <i class="text-lg md:text-2xl" :class="job.titleIcon"></i>
+        <i class="!text-lg md:!text-2xl" :class="job.titleIcon"></i>
         <label class="text-base md:text-xl font-semibold">{{job.title}}</label>
       </div>
     </template>
@@ -21,15 +21,15 @@ const props = defineProps<{
       </div>
       <div class="flex flex-col gap-2">
         <div class="flex items-center gap-2">
-          <i class="pi pi-building text-lg md:text-2xl"></i>
+          <i class="pi pi-building !text-lg md:!text-2xl"></i>
           <label>{{job.company}}</label>
         </div>
         <div class="flex items-center gap-2">
-          <i class="pi pi-map-marker text-lg md:text-2xl"></i>
+          <i class="pi pi-map-marker !text-lg md:!text-2xl"></i>
           <label>{{job.location}}</label>
         </div>
         <div class="flex items-center gap-2">
-          <i class="pi pi-calendar text-lg md:text-2xl"></i>
+          <i class="pi pi-calendar !text-lg md:!text-2xl"></i>
           <label>{{job.start}}-{{job.end}}</label>
         </div>
         <ul class="flex flex-col gap-2 list-disc pl-4">

@@ -190,7 +190,7 @@ const educations = [
     </div>
     <div class="flex flex-col gap-4">
       <div class="flex justify-center items-center gap-2">
-        <i class="pi pi-briefcase text-xl md:text-3xl"></i>
+        <i class="pi pi-briefcase !text-xl md:!text-3xl"></i>
         <label class="text-xl md:text-3xl font-semibold">Jobs</label>
       </div>
       <div class="flex flex-wrap justify-center gap-4">
@@ -199,7 +199,7 @@ const educations = [
     </div>
     <div class="flex flex-col gap-4">
       <div class="flex justify-center items-center gap-2">
-        <i class="pi pi-briefcase text-xl md:text-3xl"></i>
+        <i class="pi pi-briefcase !text-xl md:!text-3xl"></i>
         <label class="text-xl md:text-3xl font-semibold">Freelance Jobs</label>
       </div>
       <div class="flex flex-wrap justify-center gap-4">
@@ -208,7 +208,7 @@ const educations = [
     </div>
     <div class="flex flex-col gap-4">
       <div class="flex justify-center items-center gap-2">
-        <i class="pi pi-lightbulb text-xl md:text-3xl"></i>
+        <i class="pi pi-lightbulb !text-xl md:!text-3xl"></i>
         <label class="text-xl md:text-3xl font-semibold">Skills</label>
       </div>
       <div class="flex justify-center">
@@ -219,7 +219,7 @@ const educations = [
     </div>
     <div class="flex flex-col gap-4">
       <div class="flex justify-center items-center gap-2">
-        <i class="pi pi-graduation-cap text-xl md:text-3xl"></i>
+        <i class="pi pi-graduation-cap !text-xl md:!text-3xl"></i>
         <label class="text-xl md:text-3xl font-semibold">Education</label>
       </div>
       <div class="flex flex-wrap justify-center gap-4">
@@ -228,14 +228,14 @@ const educations = [
     </div>
     <div class="flex flex-col gap-4">
       <div class="flex justify-center items-center gap-2">
-        <i class="pi pi-address-book text-xl md:text-3xl"></i>
+        <i class="pi pi-address-book !text-xl md:!text-3xl"></i>
         <label class="text-xl md:text-3xl font-semibold">Contact</label>
       </div>
       <div class="flex justify-center">
         <Card class="w-full md:w-96 lg:w-[48rem]">
           <template #content>
             <div class="flex flex-col">
-              <label class="text-lg md:text-xl font-semibold">
+              <label class="!text-lg md:!text-xl font-semibold">
                 <i class="pi pi-map-marker me-1"></i>
                 Address
               </label>
