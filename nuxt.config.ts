@@ -7,6 +7,8 @@ export default defineNuxtConfig({
   css: [
     'primeicons/primeicons.css',
     '~/assets/css/main.css',
+    '@fortawesome/fontawesome-free/css/all.css',
+    'bootstrap-icons/font/bootstrap-icons.css'
   ],
   modules: [
     '@nuxtjs/tailwindcss',
